@@ -52,6 +52,7 @@
     font-size: 20px;
     text-decoration: none;
     background-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100px;
     border-radius: 10%;
     display: inline;
@@ -239,6 +240,7 @@ section p {
         font-size: 20px;
         padding: 1rem;
     }
+
 }
 
 @media (max-width: 480px) {
