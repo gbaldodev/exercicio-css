@@ -227,6 +227,17 @@ section p {
     background-color: #cc0000;
 }
 
+footer {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 10px;
+    border-radius: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
     section {
         width: 95%;
@@ -263,6 +274,10 @@ section p {
     a #botao {
         width: 80%;
         display: flex;
+    }
+
+    #servicos {
+        grid-template-columns: 100%;
     }
 }
 
