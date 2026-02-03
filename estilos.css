@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    cursor: default;
 }
 .menu{
     list-style: none;
@@ -55,6 +57,14 @@
 
 }
 
+input,
+textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(196, 194, 194);
+}
+
 #home {
     background: url("imgs/pop-in.gif")center/cover no-repeat;
     position: relative;
@@ -66,8 +76,14 @@
 #home::before {
     content: "";
     position: absolute;
-    backdrop-filter: brightness(0.8);
-    z-index: 0;
+    backdrop-filter: brightness(0.8)blur(0.2rem);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+
 }
 
 #home h1,
@@ -159,8 +175,9 @@ section p {
 #servicos {
     background-color: #f5f5f5;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 30% 30% 30%;
     gap: 2rem;
+
     padding: 5%;
 }
 
@@ -179,11 +196,12 @@ section p {
     padding: 4rem;
     color: white;
     display: flex;
-    align-items: center;
-    border-radius: 1rem;
+    font-size: 1rem;
+    flex-direction: column;
     text-align: center;
-    font-size: 1.2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
 }
 
 
@@ -228,6 +246,17 @@ section p {
     background-color: #cc0000;
 }
 
+footer {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 10px;
+    border-radius: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
     section {
         width: 95%;
@@ -260,4 +289,40 @@ section p {
         padding: 1px 5px 0px 5px;
         width: 80px;
     }
+
+    a #botao {
+        width: 80%;
+        display: flex;
+    }
+
+    #servicos {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    #servicos {
+        grid-template-columns: 100%;
+    }
+
+    h2,
+    h1 {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    #home .background-image {
+        width: 3rem;
+        height: auto;
+    }
+
+    #head a {
+        margin: 1rem;
+    }
+}
+
+a #botao {
+    width: 70%;
+}
+
 }
